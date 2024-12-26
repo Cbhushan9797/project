@@ -1,0 +1,174 @@
+/* Home container styles */
+.home-container {
+    display: flex;
+    flex-direction: row; /* Default for laptops */
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+/* Sidebar (always visible on laptop) */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100vh; /* Ensure full height */
+}
+
+/* Navigation links inside the sidebar */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add space between buttons */
+    flex-grow: 1; /* Take up remaining space */
+}
+
+.nav-links button {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center icon and text vertically */
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: black;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 20px;
+}
+
+/* Active button styles */
+.nav-links button.active {
+    background-color: #007bff; /* Highlight color */
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links button .icon {
+    margin-right: 8px; /* Space between icon and text */
+    color: inherit; /* Inherit text color */
+}
+
+.nav-links button.active .icon {
+    color: white; /* Match icon color with active text */
+}
+
+.nav-links button:hover {
+    background-color: rgb(201, 224, 233);
+}
+
+/* Bottom buttons (Logout and Contact) */
+.bottom-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between buttons */
+}
+
+.bottom-buttons button {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.bottom-buttons button:hover {
+    background-color: grey;
+}
+
+/* Right frame */
+.frame {
+    flex-grow: 1;
+    padding: 15px;
+    display: flex;
+    width: calc(100% - 250px); /* Subtract sidebar width from total width */
+}
+
+/* Mobile navbar (hidden by default) */
+.navbar {
+    display: none;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.active {
+    display: flex;
+}
+
+/* Navbar buttons */
+.navbar button {
+    display: flex; /* Align icon and text horizontally */
+    align-items: center; /* Center icon and text vertically */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.navbar button:hover {
+    background-color: #0056b3;
+}
+
+/* Icon alignment for mobile buttons */
+.navbar button .icon {
+    margin-right: 8px; /* Space between icon and text */
+    color: inherit;
+}
+
+/* Toggle button (only visible on mobile) */
+.navbar-toggle {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 5px;
+}
+
+.navbar-toggle:hover {
+    background-color: #0056b3;
+}
+
+/* Mobile styles (up to 600px) */
+@media (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+
+    .frame {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+
+    .bottom-buttons button {
+        width: 100%;
+    }
+}

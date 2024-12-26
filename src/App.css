@@ -1,0 +1,54 @@
+/* Form for Adding a New Repository */
+.add-repo-form {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.repo-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Repository List */
+.repo-item {
+  
+  display: flex;
+  height: 80px;
+  justify-content: ;
+  align-items: center;
+  padding: px;
+  background: #f5f2f2;
+  border: 1px solid #ddd;
+  border-radius: px;
+  margin-bottom: 0px;
+}
+.repo-item:hover{
+  color: black;
+  background-color:rgb(220, 215, 215);
+}
+
+.access-btn{
+  background-color: rgb(206, 235, 246);
+  border-radius: 20px;
+  border-bottom: 100px;
+  padding: .5px;
+}
+.delete-btn {
+  padding: 5px 10px;
+  background:inherit;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background:grey;
+}

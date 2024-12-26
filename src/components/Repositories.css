@@ -1,0 +1,190 @@
+.repositories-page {
+  width: 100%;
+  height: 100vh; /* Ensures the page height fills the entire viewport */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* This makes sure that the page takes up the full height */
+  padding: 20px;
+  background-color: #f9f9f9; /* Optional: Set a background color for better visual appearance */
+  box-sizing: border-box;
+}
+
+.repositories-header {
+  
+  display: flex;
+  justify-content: space-between; /* Aligns the text and buttons to opposite sides */
+  align-items: center; /* Vertically aligns the text and buttons */
+  margin-bottom: 20px; /* Adds some spacing below the header */
+}
+
+.repositories-controls {
+  display: flex;
+  gap: 15px; /* Adds space between buttons */
+  align-items: center; /* Aligns buttons vertically */
+  justify-content: flex-end; /* Aligns buttons to the right */
+}
+
+.search-box-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.search-box {
+  padding: 10px 10px 10px 35px; /* Adds space for the icon */
+  margin-right: 500px;
+  width: 800px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/svgs/solid/search.svg') no-repeat left center;
+  background-size: 18px; /* Adjust the size of the icon */
+}
+
+.search-box::placeholder {
+  color: #888; /* Optional: style for placeholder text */
+}
+
+.search-box {
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+.addButton {
+  background-color: #007bff;
+  color: white;
+}
+
+.refresh {
+  color: black;
+  background-color:inherit;
+  
+}
+
+.repositories-controls button {
+  padding: 8px 15px; /* Adjusts padding for consistency */
+  border-color: black;
+
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+
+.repositories-controls button .icon {
+  color: inherit;
+}
+
+.repositories-controls button:hover {
+  background-color: #0056b3;
+}
+
+.add-repo-form {
+  margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white; /* To make the form stand out */
+}
+
+.repo-input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.repository-list {
+  flex-grow: 1; /* Allows the list to grow and fill the available space */
+  overflow-y: auto; /* Adds scrolling for large lists */
+  margin-top: 20px;
+}
+
+.repo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.delete-btn {
+  padding: 8px 12px;
+  border: none;
+  background-color: #dc3545;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+@media (max-width: 768px) {
+  .repositories-header {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%; /* Make sure the header takes full width */
+    padding: px;
+  }
+
+  .repositories-controls {
+    margin-top: 1rem;
+    order: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .repository-list {
+    margin-top: 10px;
+  }
+
+  .repo-item {
+    padding: 9px;
+  }
+
+  .repo-item span {
+    display: flex;
+    width: 100%; /* Ensure each span takes full width */
+    margin-bottom:;
+  }
+
+  
+
+  .repo-item span span {
+    display: inline-flexbox;
+    margin-right: 10px;
+  }
+
+  
+
+  .delete-btn {
+    margin-bottom: 100px;
+    align-self: last baseline;
+    margin-bottom: 25px;
+  }
+
+  /* Adjust search box for mobile view */
+  .search-box {
+    margin-left: 30px;
+    margin-top: -25px; /* Adjust this value to move the search box upward */
+    width: 100%;
+  }
+
+  .addButton, .refresh {
+    width: 100%; /* Make buttons stack vertically on mobile */
+    text-align: left;
+    margin-bottom: 10px; /* Add space between buttons */
+  }
+
+  .addButton .icon, .refresh .icon {
+    margin-right: 10px; /* Add spacing between icon and text */
+  }
+}

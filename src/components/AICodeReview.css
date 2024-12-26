@@ -1,0 +1,16 @@
+.myPage{
+    width: 100vh;
+    height: 100vh; /* Ensures the page height fills the entire viewport */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* This makes sure that the page takes up the full height */
+    padding: 20px;
+    background-color: rgb(228, 222, 233); /* Optional: Set a background color for better visual appearance */
+    box-sizing: border-box;
+  }
+  
+ p{
+    text-align: center;
+    font: bold;
+    
+ }
